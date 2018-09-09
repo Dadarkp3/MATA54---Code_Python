@@ -20,6 +20,7 @@ def pede_pagou():
 def mostrar_dados(nome, rg, telefone, pagou):
     print('Nome: %s. RG: %s. Telefone: %s - Pagou a entrada: ' % nome, rg, telefone, pagou and 'Sim' or 'Não')
 
+
 def pede_nome_arquivo():
     return input('Qual o nome do arquivo que deseja: ')
 
@@ -36,7 +37,7 @@ def pesquisa_rg(rg):
     for p, e in enumerate(lista_pessoas):
         if e[1] == rg:
             return p
-    return  None
+    return None
 
 
 def novo_registro():
@@ -55,12 +56,14 @@ def novo_registro():
         lista_pessoas.append([nome, rg, telefone, pagou])
         print('O registro foi salvo no arquivo.')
 
+
 def apaga_registro():
     p = pesquisa_rg(pesquisa_rg())
     if p is not None:
         del lista_pessoas[p]
     else:
         print('Registro não encontrado.')
+
 
 def altera_registro():
     p = pesquisa_rg(pede_rg())
@@ -85,7 +88,3 @@ def lista():
     for e in lista_pessoas:
         mostrar_dados(e[0], e[1], e[2], e[3])
         print('-------\n')
-
-
-
-

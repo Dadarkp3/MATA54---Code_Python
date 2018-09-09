@@ -5,6 +5,6 @@ def linear_search(A, x):
     return False
 
 
-if __name__=="__main__":
-    A = [10,20,-1,19,40]
+if __name__ == "__main__":
+    A = [10, 20, -1, 19, 40]
     print(linear_search(A, 1))
